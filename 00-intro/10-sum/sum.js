@@ -7,5 +7,5 @@
  */
 export function sum(a, b) {
   // Решение
-  return a + b;
+  return a + b
 }
