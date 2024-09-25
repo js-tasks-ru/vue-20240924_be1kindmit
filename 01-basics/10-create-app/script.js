@@ -1,9 +1,9 @@
-import { defineComponent, createApp } from 'vue/dist/vue.esm-bundler.js'
+import { defineComponent, createApp } from 'vue'
 
 const DateComponent = defineComponent({
   name: 'DateComponent',
   setup() {
-    const currentDate = new Date().toLocaleDateString('en-US', { dateStyle: 'long' })
+    const currentDate = new Date().toLocaleDateString(navigator.language, { dateStyle: 'long' })
 
     return {
       currentDate,
