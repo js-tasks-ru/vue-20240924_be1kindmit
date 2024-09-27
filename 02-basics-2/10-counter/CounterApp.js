@@ -32,6 +32,7 @@ const CounterApp = defineComponent({
       <button
         @click="decrement"
         :disabled="decrementButtonDisabled"
+        :aria-disabled="decrementButtonDisabled"
         class="button button--secondary"
         type="button"
         aria-label="Decrement"
@@ -43,6 +44,7 @@ const CounterApp = defineComponent({
       <button
         @click="increment"
         :disabled="incrementButtonDisabled"
+        :aria-disabled="incrementButtonDisabled"
         class="button button--secondary"
         type="button"
         aria-label="Increment"
