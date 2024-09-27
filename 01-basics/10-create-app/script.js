@@ -1,4 +1,4 @@
-import { defineComponent, createApp } from 'vue'
+import { defineComponent, createApp } from 'vue/dist/vue.esm-bundler'
 
 const DateComponent = defineComponent({
   name: 'DateComponent',
