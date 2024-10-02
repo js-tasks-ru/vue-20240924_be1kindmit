@@ -16,11 +16,11 @@ export default defineComponent({
     }
 
     onMounted(async () => {
-      void fetchMeetup()
+      await fetchMeetup()
     })
 
     watch(selectedMeetup, async () => {
-      void fetchMeetup()
+      await fetchMeetup()
     })
 
     return {
@@ -34,7 +34,7 @@ export default defineComponent({
   template: `
     <div class="meetup-selector">
       <div class="meetup-selector__control">
-        <button class="button button--secondary" type="button" :disabled="prevDisabled" :aria-disabled="prevDisabled"
+        <button class="button button--secondary" type="button" :disabled="prevDisabled"
                 @click="selectedMeetup--">Предыдущий
         </button>
 
@@ -96,7 +96,7 @@ export default defineComponent({
           </div>
         </div>
 
-        <button class="button button--secondary" type="button" :disabled="nextDisabled" :aria-disabled="nextDisabled"
+        <button class="button button--secondary" type="button" :disabled="nextDisabled"
                 @click="selectedMeetup++">Следующий
         </button>
       </div>
