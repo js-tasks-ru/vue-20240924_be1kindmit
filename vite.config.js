@@ -1,10 +1,9 @@
 import { defineConfig } from 'vite'
 import { createTaskbookViteConfig } from '@shgk/vue-course-taskbook/configs/vite.config.js'
+import svgLoader from 'vite-svg-loader'
 
 const customConfig = defineConfig({
-  test: {
-    include: ['**/*.{test,spec}.?(c|m)[jt]s?(x)', '**/*.svg'],
-  },
+  plugins: [svgLoader()],
 })
 
 export default createTaskbookViteConfig({
